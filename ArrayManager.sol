@@ -10,8 +10,12 @@ contract ArrayManager{
         return Randoms[index];
     }
 
+    // A common mistake is to declare a local variable (of struct, array or mapping) and assume that it will be created in memory, 
+    // although it will be created in storage.
+    
     // the keyword “memory” is used to hold temporary values. 
     // It is erased between (external) function calls and is cheaper to use.
+    
     function GetRandoms() public view returns(uint[] memory){
         return Randoms;
     }

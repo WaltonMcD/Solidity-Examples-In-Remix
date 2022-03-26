@@ -37,11 +37,11 @@ contract ArrayManager{
         return Randoms.length;
     }
     
-    function RandsAddMod(uint index) public view returns(uint){
-        return addmod(Randoms[index], 5, 3);
+    function RandsAddMod(uint index, uint y, uint z) public view returns(uint){
+        return addmod(Randoms[index], y, z);
     }
 
-    function RandsMulMod(uint index) public view returns(uint){
-        return mulmod(Randoms[index], 5, 3);
+    function RandsMulMod(uint index, uint y, uint z) public view returns(uint){
+        return mulmod(Randoms[index], y, z);
     } 
 }

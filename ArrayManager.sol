@@ -35,5 +35,13 @@ contract ArrayManager{
 
     function GetRandomsLength() public view returns(uint){
         return Randoms.length;
+    }
+    
+    function RandsAddMod(uint index) public view returns(uint){
+        return addmod(Randoms[index], 5, 3);
+    }
+
+    function RandsMulMod(uint index) public view returns(uint){
+        return mulmod(Randoms[index], 5, 3);
     } 
 }
